@@ -1,23 +1,43 @@
- :root {
-    --bg: #ffffff;
-    --text: #111111;
-    --accent: #0066cc;
-    --section-padding: 4rem;
+:root {
+    --bg: linear-gradient(135deg, #a1c4fd, #c2e9fb, #a8edea, #b1f4cf);
+    --text: #2c2e4a;
+    --accent: #3aaf7c;
+    --section-padding: 2rem;
 }
 
 [data-theme="dark"] {
-    --bg: #111111;
-    --text: #f5f5f5;
-    --accent: #4dabf7;
+    --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --text: #c5c6f9;
+    --accent: #66d8a3;
+}
+
+[data-theme="dark"] a {
+    color: #93c9f0;
+}
+
+[data-theme="dark"] a:hover {
+    color: #addbff;
+}
+
+a {
+    color: #267e92;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2f9db2;
+    text-decoration: underline;
 }
 
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
-    background-color: var(--bg);
+    background: var(--bg);
     color: var(--text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background 0.5s ease, color 0.5s ease;
     scroll-behavior: smooth;
+    font-family: 'Rubik', sans-serif;
 }
 
 nav {
@@ -28,8 +48,9 @@ nav {
     height: 100%;
     background: var(--bg);
     border-right: 1px solid #ccc;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 nav a {
@@ -44,13 +65,29 @@ nav a:hover {
     color: var(--accent);
 }
 
+button {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: auto;
+}
+
+button:hover {
+    background: var(--accent);
+    color: white;
+}
+
 main {
     margin-left: 200px;
     padding: 2rem;
 }
 
 section {
-    padding: var(--section-padding) 1rem;
+    padding: 0.5rem 1rem;
     max-width: 800px;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -58,6 +95,13 @@ section {
 
 section:hover {
     transform: scale(1.01);
+}
+
+.contact {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 1rem;
 }
 
 h2 {
